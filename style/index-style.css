@@ -1,0 +1,90 @@
+/*
+    Contents
+
+    #001 Header
+    #002 General
+    #003 Main Menu
+    #004 Miscellaneous classes
+
+*/
+
+
+
+/* ;; Header #001 */
+#hero-background {
+    color: var(--almost-white);
+    height: var(--hero-height);
+    margin: 0;
+    padding: 2rem 0;
+    background-color: #425249;
+    background: url('../images/desktop-image.jpg') rgb(66, 82, 73) no-repeat;
+    background-size: cover;
+    background-position: 0% 30%;
+}
+
+#hero-content {
+    height: var(--hero-height);
+    padding: 0 var(--global-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+@media only screen and (min-width: 600px) {
+    #hero-content {
+        width: 40%
+    }
+}
+
+#hero-content h1 {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+#main-intro {
+    padding: 4rem var(--global-padding);
+    text-align: center;
+    min-height: 450px;
+  }
+
+#cta {
+    width: 32rem;
+}
+
+#coaching-section {
+    background: url('../images/coaching.jpg') rgb(66, 82, 73) no-repeat;
+    background-size: cover;
+    background-position: 50% 70%;
+}
+
+#topics-section {
+    background: url('../images/topics.jpg') rgb(66, 82, 73) no-repeat;
+    background-size: cover;
+    background-position: 30% 70%;
+
+}
+
+
+
+/* ;; main #005 */
+h2 {
+    font-size: 8rem;
+    margin: 0 0 2rem;
+}
+
+section {
+    min-height: 350px;
+    padding: 6rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+@media only screen and (max-width:600px) {
+    section {
+        text-align: center;
+    }
+}
+
+address {
+    font-size: 2rem;
+}

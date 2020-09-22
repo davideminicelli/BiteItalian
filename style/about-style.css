@@ -1,0 +1,10 @@
+/* About Page */
+#secondary-hero-background {
+    min-height: 35rem;
+    text-align: center;
+}
+
+main {
+    padding: var(--global-padding);
+    text-align: justify;
+}

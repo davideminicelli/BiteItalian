@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bite Italian - Italian lessons for language and culture</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+
+
+        /*
+            Contents
+
+            #001 Variables and basic sizing
+            #002 General
+            #003 Main Menu
+            #004 Miscellaneous classes
+
+        */
+
+
+
+        /* ;; Variables and basic sizing #001 */
+        :root {
+
+        /* fonts */
+        --head-font: 'DM Serif Text', serif;
+        --main-font: 'Poppins', sans-serif;
+        font-size: 10px;
+
+
+        /* colors */
+        --almost-white: #fafafa;
+        --invisible: rgba(100, 100, 100, 0);
+        --primary-color: #876;
+        --secondary-color: #4a4d39;
+
+        /* sizing */
+        --global-padding: 8rem;
+        --hero-height: 550px;
+
+        }
+        @media only screen and (max-width: 600px) {
+        :root {
+            --global-padding: 6rem;
+            font-size: 8px;
+        }
+        }
+
+
+
+        /* ;; General #002 */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+        padding:0;
+        margin:0;
+        font-family: var(--main-font);
+        background-color: var(--almost-white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+        font-family: var(--head-font);
+        }
+
+        h1 {
+        font-size: 7rem;
+        margin: 0;
+        }
+
+
+        a {
+        /* text-decoration: none; */
+        color: inherit;
+        font-size: 2rem;
+        }
+
+        ul {
+        font-size: 2.3rem;
+        text-align: left;
+        list-style-type: none;
+        padding: 0 1rem;
+        }
+
+        li {
+        padding: 0.5rem 0;
+        }
+
+        p {
+        font-family: var(--main-font);
+        font-size: 2rem;
+        margin: 3rem 0;
+        }
+
+
+
+        /* ;; main menu #003 */
+        #main-menu {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1rem 8rem;
+        align-content: center;
+        }
+        @media only screen and (max-width: 600px) {
+        #main-menu {
+            flex-direction: column;
+            padding: 1rem;
+        }
+        }
+
+        #menu-button {
+        text-decoration: none;
+        font-weight: normal;
+        text-align: center;
+        font-size: 20px;
+        font-family: var(--head-font);
+        }
+        @media only screen and (min-width: 600px) {
+        #menu-button {
+            display: none;
+            width: 0px;
+            height: 0px;
+        }    
+        }
+
+        #menu-list a {
+        text-decoration: none;
+        color: black;
+        }
+
+        #menu-list li {
+        transition: ease-in-out 0.3s;
+        text-decoration: none;
+        list-style-type: none;
+        font-family: var(--head-font);
+        }
+        @media only screen and (max-width: 600px) {
+        #menu-list li {
+            padding: 4rem;
+        }
+        }
+
+        #menu-list li:hover {
+        list-style-type: disc;
+        }
+
+        #menu-list {
+        font-size: 1.8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        transition: ease-in-out 0.2s;
+        }
+        @media only screen and (max-width: 600px) {
+        #menu-list {
+            flex-direction: column;
+        }
+        }
+
+        #menu-list a {
+        text-decoration: none;
+        color: black;
+        }
+
+        .collapsed {
+        height: 0px;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        }
+
+        .sticky {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: var(--almost-white);
+        box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.75);
+        }
+
+
+        /* Miscellaneous classes 004*/
+        .centered-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        }
+
+        .color-invert {
+        color: var(--almost-white);
+        background-color: #282841;
+        }
+
+        .section-content {
+        margin: 0 var(--global-padding);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        /* align-self: flex-start; */
+        }
+        @media only screen and (min-width: 800px) {
+        .section-content {
+            max-width: 40%;
+        }
+        }
+
+        .section-content p {
+        text-align: justify;
+        }
+
+        .content-invert {
+        justify-content: flex-start;
+        }
+
+
+        .buttonlike {
+        margin: 2rem 0;
+        padding: 2rem;
+        border-radius: 2rem;
+        /* border-width: 0.4rem;
+        border-color: var(--almost-white);
+        border-style: solid; */
+        background-color: var(--invisible);
+        font-size: 3rem;
+        font-family: var(--head-font);
+        color: var(--almost-white);
+        text-align: center;
+        text-decoration: none;
+        }
+        @media only screen and (max-width:600px) {
+        .buttonlike {width: 28rem;
+            font-size: 3.4rem}
+        }
+
+        .buttonlike:hover {
+        transition: 0.2s ease-in-out;
+        background-color: var(--almost-white);
+        color: var(--secondary-color);
+        text-decoration: none;
+        }
+
+
+        /* footer */
+        footer {
+        height: 35rem;
+        background-color: rgb(43, 35, 27);
+        color: var(--almost-white);
+        }
+
+        footer nav {
+        padding: var(--global-padding);
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        }
+
+        footer ul, footer a {
+        font-size: 1.3rem;
+        text-decoration: none;
+        }
+
+        footer a:hover {
+        text-decoration: underline;
+        }
+                /*
+            Contents
+
+            #001 Header
+            #002 General
+            #003 Main Menu
+            #004 Miscellaneous classes
+
+        */
+
+
+
+        /* ;; Header #001 */
+        #hero-background {
+            color: var(--almost-white);
+            height: var(--hero-height);
+            margin: 0;
+            padding: 2rem 0;
+            background-color: #425249;
+            background: url('images/desktop-image.jpg') rgb(66, 82, 73) no-repeat;
+            background-size: cover;
+            background-position: 0% 30%;
+        }
+
+        #hero-content {
+            height: var(--hero-height);
+            padding: 0 var(--global-padding);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        @media only screen and (min-width: 600px) {
+            #hero-content {
+                width: 40%
+            }
+        }
+
+        #hero-content h1 {
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        #main-intro {
+            padding: 4rem var(--global-padding);
+            text-align: center;
+            min-height: 450px;
+        }
+
+        #coaching-section {
+            background: url('images/coaching.jpg') rgb(66, 82, 73) no-repeat;
+            background-size: cover;
+            background-position: 50% 70%;
+        }
+
+        #topics-section {
+            background: url('images/topics.jpg') rgb(66, 82, 73) no-repeat;
+            background-size: cover;
+            background-position: 30% 70%;
+
+        }
+
+
+
+        /* ;; main #005 */
+        h2 {
+            font-size: 8rem;
+            margin: 0 0 2rem;
+        }
+
+        section {
+            min-height: 350px;
+            padding: 6rem 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        @media only screen and (max-width:600px) {
+            section {
+                text-align: center;
+            }
+        }
+
+        address {
+            font-size: 2rem;
+        }
+
+
+    </style>
+
+</head>
+
+
+    <body>
+    <header>
+        <nav id = "main-menu">
+            <div id="menu-button" onclick="collapser(document.getElementById('menu-list'))"><p>Menu</p></div>
+            <ul id="menu-list">
+                <!-- <li><a href = "#" id = "menu-logo">Logo</a></li> -->
+                <li><a href="index.html">Bite Italian - Home</a></li>
+                <li><a href="index.html#coaching-section">Cultural coaching</a></li>
+                <li><a href="index.html#lessons-section">Web Lessons</a></li>
+                <li><a href="index.html#topics-section">Topics</a></li>
+                <li><a href="index.html#contacts-section">contacts</a></li>
+                <!-- <li><a href="about.html">About Us</a></li> -->
+            </ul>
+        </nav>
+        <div id = "hero-background">
+            <div id="hero-content">
+                <h1>Learn Italian, and everything around it</h1>
+            </div>
+        </div>
+        <div id="main-intro" class="centered-header">
+            <h2>Welcome to bite italian</h2>
+                <p>Not just Italian Lessons!<br />
+                Italian is not just a beautiful language.. 
+                is a great culture and a stunning country..
+                If you love Italy, for any reasons, you need to 
+                understand the "Italian way"
+                </p>
+        </div>
+    </header>
+    
+    <main>
+        <section id="coaching-section" class="content-invert color-invert">
+            <div class="section-content">
+                <h2>Why Cultural Coaching</h2>
+                    <p>Language is just the beginning: Italian culture is a 
+                    colorful mix of gestures, customs, longstanding traditions
+                    and even words may mean completely different things based on
+                    context. If you really want to dig in Italian culture, we can
+                    teach you how to understand and read all these signs,
+                    that remain invisible to the novice.
+                    </p>
+            </div>
+        </section>
+        
+        <section id="lessons-section">
+            <div class="section-content">
+                <h2>Tailored Web lessons</h2>
+                    <p>Our web lessons are tailored to your goals, 
+                    your interests, and your reasons to learn this beautiful
+                    and rich language.
+                    </p>
+                    <a href="#">More about Web Lessons</a>
+            </div>
+        </section>
+
+        <section id="topics-section"  class="content-invert color-invert">
+            <div class="section-content">
+                <h2>Topics</h2>
+                    <p>Our topics range widely, and they include:
+                        <ul>
+                            <li>Design and manufacture</li>
+                            <li>Cooking</li>
+                            <li>Art</li>
+                            <li>Sport</li>
+                            <li>History</li>
+                            <li>Regional Culture and History</li>
+                        </ul>
+                    </p>
+                    <a href="#">More about Topics</a>
+            </div>
+        </section>
+
+        <section id="contacts-section">
+            <div class="section-content">
+                <h2>Contacts</h2>
+                <address>
+                    Telephone: 00000 000000<br />
+                    Email: email@email.com<br />
+                    Facebook: <a href="https://www.facebook.com/Bite-Italian-Italian-lessons-in-Leeds-100186841555073/">Bite Italian on Facebook</a><br />
+                    Instagram: <a href="https://www.instagram.com/?hl=en">Bite Italian on Instagram</a><br />
+                </address>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+            <nav>
+                <ul id="footer-menu">
+                    <li><a href="index.html">Bite Italian - Home</a></li>
+                    <li><a href="index.html#coaching-section">Cultural coaching</a></li>
+                    <li><a href="index.html#lessons-section">Web Lessons</a></li>
+                    <li><a href="index.html#topics-section">Topics</a></li>
+                    <li><a href="index.html#contacts-section">contacts</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+                <ul id="social-menu">
+                    <li><a href="https://www.facebook.com/Bite-Italian-Italian-lessons-in-Leeds-100186841555073/">Facebook</a></li>
+                    <li><a href="https://twitter.com">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/?hl=en">Instagram</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Cookies Policy</a></li>
+                </ul>
+            </nav>
+    </footer>
+
+</body>
+<script src="script/main-script.js"></script>
+</html>
